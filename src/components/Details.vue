@@ -33,17 +33,10 @@
         </div>
       </div>
     </div>
-    <div class="card" v-else-if="compKey == 0">
+    <div class="card" v-else-if="compKey !== 0">
       <div class="card-body">
         <div class="basic-info">
-          <GenericDetail :msg="'Welcome Search for Stuff!'" />
-        </div>
-      </div>
-    </div>
-    <div class="card" v-else>
-      <div class="card-body">
-        <div class="basic-info">
-          <GenericDetail :msg="'Click on a card for more information'" />
+          <GenericDetail :msg="'Click on a card for more info'" />
         </div>
       </div>
     </div>

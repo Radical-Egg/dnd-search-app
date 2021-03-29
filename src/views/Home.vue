@@ -4,7 +4,9 @@
       <div class="Search-Bar">
         <Search v-on:forceRerender="forceRerender()" />
       </div>
-      <div class="CD-Wrapper"></div>
+      <div class="CD-Wrapper">
+        <div class="home-wrapper" v-if="componentKey == 0"><HomeCard /></div>
+      </div>
       <div class="Cards Scroll">
         <Card
           v-for="result in results"
@@ -25,13 +27,15 @@
 import Search from "@/components/Search.vue";
 import Card from "@/components/Card.vue";
 import Details from "@/components/Details.vue";
+import HomeCard from "@/components/HomeCard.vue";
 
 export default {
   name: "Home",
   components: {
     Search,
     Card,
-    Details
+    Details,
+    HomeCard
   },
   computed: {
     results: {
