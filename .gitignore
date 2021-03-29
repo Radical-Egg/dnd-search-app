@@ -21,3 +21,9 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+src-tauri/Cargo.lock
+
+
+*.ttf
+*.txt
+.prettierrc
