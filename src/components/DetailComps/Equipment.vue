@@ -1,6 +1,8 @@
 <template>
   <div class="equipment">
-    <p class="card-text">{{ details.cardData.desc[0] }}</p>
+    <p class="card-text" v-if="details.cardData.desc !== undefined">
+      {{ details.cardData.desc[0] }}
+    </p>
     <ul style="text-align:left;">
       <li>
         Cost: {{ details.cardData.cost.quantity }}
