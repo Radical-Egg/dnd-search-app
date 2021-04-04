@@ -27,3 +27,4 @@ src-tauri/Cargo.lock
 *.ttf
 *.txt
 .prettierrc
+package-lock.json

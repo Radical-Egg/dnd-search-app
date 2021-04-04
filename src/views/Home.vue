@@ -110,6 +110,7 @@ export default {
     display: inline-block;
     margin-bottom: 50px;
     padding-left: 50px;
+    margin-right: 10px;
   }
 
   div.Scroll {

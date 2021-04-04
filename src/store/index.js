@@ -21,6 +21,11 @@ export default new Vuex.Store({
       state.searchQuery = message;
     },
     UpdateResults: (state, result) => {
+      // some urls in the api are missing the leading /
+      // just checking for it and adding it if needed
+      if (result[0] !== "/") {
+        result = "/" + result;
+      }
       state.results.push(result);
     },
     ClearResults: state => {

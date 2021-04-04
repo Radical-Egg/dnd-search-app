@@ -31,6 +31,21 @@
         >
           <AbilityScores :details="details" />
         </div>
+        <div class="basic-info" v-else-if="details.category === 'equipment'">
+          <Equipment :details="details" />
+        </div>
+        <div class="basic-info" v-else-if="details.category === 'damage-types'">
+          <DamageTypes :details="details" />
+        </div>
+        <div class="basic-info" v-else-if="details.category === 'alignments'">
+          <Alignments :details="details" />
+        </div>
+        <div class="basic-info" v-else-if="details.category === 'backgrounds'">
+          <Backgrounds :details="details" />
+        </div>
+        <div class="basic-info" v-else-if="details.category === 'classes'">
+          <Classes :details="details" />
+        </div>
       </div>
     </div>
     <div class="card" v-else-if="compKey !== 0">
@@ -44,11 +59,18 @@
 </template>
 
 <script>
-import Spell from "./DetailComps/Spell.vue";
-import Feature from "./DetailComps/Feature.vue";
-import EquipmentCategories from "./DetailComps/EquipmentCategories.vue";
-import AbilityScores from "./DetailComps/AbilityScores.vue";
-import GenericDetail from "./DetailComps/GenericDetail.vue";
+import {
+  Spell,
+  Feature,
+  EquipmentCategories,
+  AbilityScores,
+  GenericDetail,
+  Equipment,
+  DamageTypes,
+  Alignments,
+  Backgrounds,
+  Classes
+} from "./DetailComps";
 
 export default {
   name: "detail",
@@ -57,7 +79,12 @@ export default {
     Feature,
     EquipmentCategories,
     AbilityScores,
-    GenericDetail
+    GenericDetail,
+    Equipment,
+    DamageTypes,
+    Alignments,
+    Backgrounds,
+    Classes
   },
   props: {
     title: {
