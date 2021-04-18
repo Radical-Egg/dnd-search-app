@@ -46,6 +46,12 @@
         <div class="basic-info" v-else-if="details.category === 'classes'">
           <Classes :details="details" />
         </div>
+        <div class="basic-info" v-else-if="details.category === 'conditions'">
+          <Conditions :details="details" />
+        </div>
+        <div class="basic-info" v-else-if="details.category === 'languages'">
+          <Languages :details="details" />
+        </div>
       </div>
     </div>
     <div class="card" v-else-if="compKey !== 0">
@@ -69,7 +75,9 @@ import {
   DamageTypes,
   Alignments,
   Backgrounds,
-  Classes
+  Classes,
+  Conditions,
+  Languages
 } from "./DetailComps";
 
 export default {
@@ -84,7 +92,9 @@ export default {
     DamageTypes,
     Alignments,
     Backgrounds,
-    Classes
+    Classes,
+    Conditions,
+    Languages
   },
   props: {
     title: {

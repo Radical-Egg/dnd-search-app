@@ -8,6 +8,8 @@ import Spell from "./Spell.vue";
 import Alignments from "./Alignments.vue";
 import Backgrounds from "./Backgrounds.vue";
 import Classes from "./Classes.vue";
+import Conditions from "./Conditions.vue";
+import Languages from "./Languages.vue";
 
 export {
   DamageTypes,
@@ -19,5 +21,7 @@ export {
   Spell,
   Alignments,
   Backgrounds,
-  Classes
+  Classes,
+  Conditions,
+  Languages
 };
